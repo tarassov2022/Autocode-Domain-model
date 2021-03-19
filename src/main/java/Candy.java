@@ -73,5 +73,6 @@ public class Candy
         /**
          * Assign parameter weight to class variable 'weight'.
          */
+        throw new UnsupportedOperationException("You need to implement this method");
     }
 }
