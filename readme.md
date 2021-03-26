@@ -1,8 +1,20 @@
-# Task Description
+# Domain model
 
-Your domain area is Gift Box with candies.
+### Goals
+- Practice to work with Java objects.
+- Practice to work with Java packages.
+- Practice to work with Java interfaces.
+- Practice refactoring of code based on specification.
 
-**1. You should put the following classes into package 'candies':**
+### Short description
+Your domain area is Gift Box with candies. You should update code to match specification. After that you should implement required methods in domain area.
+
+Please see readme.md  file in skeleton repository for detailed instructions.
+
+
+### Detailed description
+
+**1. You should put the following classes into package 'com.epam.tat.domainmodel.candies':**
 - Candy.
 - CandyBase.
 
