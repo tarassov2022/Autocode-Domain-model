@@ -22,7 +22,7 @@ public class ProjectTest {
     @Test
     public void shouldCandyGetWeightReturnWeight() {
         Candy testCandy = new Candy("Bounty", 18);
-        assertEquals(18000, testCandy.getWeight(), "Method of 'getWeight' of Candy return wrong value");
+        assertEquals(18, testCandy.getWeight(), "Method of 'getWeight' of Candy return wrong value");
     }
 
     @Test

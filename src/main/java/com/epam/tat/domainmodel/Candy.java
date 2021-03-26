@@ -9,16 +9,14 @@ package com.epam.tat.domainmodel;
  * put this class into package 'com.epam.tat.domainmodel.candies'.
  * <p>
  */
-public class Candy
-{
+public class Candy {
 
     /**
      * Implement constructor with two arguments:
      * @param name
      * @param weight
      */
-    public Candy(String name, int weight)
-    {
+    public Candy(String name, int weight) {
         /**
          * Assign parameter 'name' to class variable 'name' and
          * parameter 'weight' to class variable 'weight'.
@@ -29,8 +27,7 @@ public class Candy
      * No actions are required within the method getName
      */
     @Override
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
@@ -38,8 +35,7 @@ public class Candy
      * No actions are required within the method setName
      */
     @Override
-    public void setName(String name)
-    {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -48,8 +44,7 @@ public class Candy
      * returns class variable 'weight'
      */
     @Override
-    public int getWeight()
-    {
+    public int getWeight() {
         /**
          * return class variable 'weight'.
          */
@@ -62,8 +57,7 @@ public class Candy
      * which is assigned to class variable 'weight'.
      */
     @Override
-    public void setWeight(int weight)
-    {
+    public void setWeight(int weight) {
         /**
          * Assign parameter weight to class variable 'weight'.
          */

@@ -14,8 +14,7 @@ import java.util.List;
  * finding candies by parameters.
  * <p>
  */
-public class GiftBox
-{
+public class GiftBox {
     /**
      * No actions are required for class variable candiesList.
      */
@@ -24,16 +23,14 @@ public class GiftBox
     /**
      * No actions are required for constructor GiftBox().
      */
-    public GiftBox()
-    {
+    public GiftBox() {
         candiesList = new ArrayList<Candy>();
     }
 
     /**
      * No actions are required for method addCandy().
      */
-    public void addCandy(Candy candy)
-    {
+    public void addCandy(Candy candy) {
         this.candiesList.add(candy);
     }
 
@@ -42,8 +39,7 @@ public class GiftBox
      * and return sorted by name ascending list of candies.
      */
     @Override
-    public List<Candy> sortCandiesByNameAsc()
-    {
+    public List<Candy> sortCandiesByNameAsc() {
         throw new UnsupportedOperationException("You need to implement this method");
     }
 
@@ -52,8 +48,7 @@ public class GiftBox
      * and return sorted by weight ascending list of candies.
      */
     @Override
-    public List<Candy> sortCandiesByWeightAsc()
-    {
+    public List<Candy> sortCandiesByWeightAsc() {
         throw new UnsupportedOperationException("You need to implement this method");
     }
 
@@ -62,8 +57,7 @@ public class GiftBox
      * and return list of candies which names started with candyNameFirstLetter in name ascending list of candies.
      */
     @Override
-    public List<Candy> findCandiesByNameStartedWith(char candyNameFirstLetter)
-    {
+    public List<Candy> findCandiesByNameStartedWith(char candyNameFirstLetter) {
         throw new UnsupportedOperationException("You need to implement this method");
     }
 
@@ -72,8 +66,7 @@ public class GiftBox
      * and return list of candies with weight in range [weightFrom, weightTo] in weight ascending list of candies.
      */
     @Override
-    public List<Candy> findCandiesByWeightInRange(int weightFrom, int weightTo)
-    {
+    public List<Candy> findCandiesByWeightInRange(int weightFrom, int weightTo) {
         throw new UnsupportedOperationException("You need to implement this method");
     }
 }
