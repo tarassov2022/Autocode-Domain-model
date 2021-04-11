@@ -1,11 +1,11 @@
 package com.epam.tat.domainmodel.giftbox;
-
 import com.epam.tat.domainmodel.candies.Candy;
 import com.epam.tat.domainmodel.util.Finding;
 import com.epam.tat.domainmodel.util.Sorting;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+
+
 
 /**
  * Class Description:
@@ -14,12 +14,13 @@ import java.util.List;
  * finding candies by parameters.
  * <p>
  */
-public class GiftBox {
+public class GiftBox implements Finding, Sorting{
     /**
      * No actions are required for class variable candiesList.
      */
     private List<Candy> candiesList;
 
+   
     /**
      * No actions are required for constructor GiftBox().
      */
@@ -40,7 +41,14 @@ public class GiftBox {
      */
     @Override
     public List<Candy> sortCandiesByNameAsc() {
-        throw new UnsupportedOperationException("You need to implement this method");
+
+        Collections.sort(candiesList, new Comparator<Candy>(){
+          public int compare(Candy a,Candy b){
+              return a.getName().compareTo(b.getName());
+          }
+        });
+
+    return candiesList;   // throw new UnsupportedOperationException("You need to implement this method");
     }
 
     /**
@@ -49,7 +57,14 @@ public class GiftBox {
      */
     @Override
     public List<Candy> sortCandiesByWeightAsc() {
-        throw new UnsupportedOperationException("You need to implement this method");
+        Collections.sort(candiesList, new Comparator<Candy> () {
+            public int compare(Candy a, Candy b) {
+                return a.getWeight() - b.getWeight();
+            }
+        });
+
+        //throw new UnsupportedOperationException("You need to implement this method");
+    return candiesList;
     }
 
     /**
@@ -58,7 +73,15 @@ public class GiftBox {
      */
     @Override
     public List<Candy> findCandiesByNameStartedWith(char candyNameFirstLetter) {
-        throw new UnsupportedOperationException("You need to implement this method");
+        List<Candy> flList=new ArrayList<>();
+        for ( Candy p : candiesList ){
+            if (p.getName().charAt(0)==candyNameFirstLetter){
+              flList.add(p);
+            }
+        }
+
+        //throw new UnsupportedOperationException("You need to implement this method");
+        return flList;
     }
 
     /**
@@ -67,6 +90,14 @@ public class GiftBox {
      */
     @Override
     public List<Candy> findCandiesByWeightInRange(int weightFrom, int weightTo) {
-        throw new UnsupportedOperationException("You need to implement this method");
+        List<Candy> wrList=new ArrayList<>();
+        for ( Candy p : candiesList ){
+            if ((p.getWeight()>=weightFrom)&(p.getWeight()<=weightTo)){
+                wrList.add(p);
+            }
+        }
+
+      //  throw new UnsupportedOperationException("You need to implement this method");
+        return wrList;
     }
 }

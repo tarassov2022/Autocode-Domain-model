@@ -1,4 +1,4 @@
-package com.epam.tat.domainmodel;
+package com.epam.tat.domainmodel.candies;
 
 /**
  * Class Description:
@@ -9,19 +9,23 @@ package com.epam.tat.domainmodel;
  * put this class into package 'com.epam.tat.domainmodel.candies'.
  * <p>
  */
-public class Candy {
-
+public class Candy extends CandyBase {
+    private String name;
+     private int weight;
     /**
      * Implement constructor with two arguments:
      * @param name
      * @param weight
      */
     public Candy(String name, int weight) {
+    this.name=name;
+    this.weight=weight;
         /**
          * Assign parameter 'name' to class variable 'name' and
          * parameter 'weight' to class variable 'weight'.
          */
     }
+
 
     /**
      * No actions are required within the method getName
@@ -45,10 +49,11 @@ public class Candy {
      */
     @Override
     public int getWeight() {
+        return weight;
         /**
          * return class variable 'weight'.
          */
-        throw new UnsupportedOperationException("You need to implement this method");
+       // throw new UnsupportedOperationException("You need to implement this method");
     }
 
     /**
@@ -58,9 +63,10 @@ public class Candy {
      */
     @Override
     public void setWeight(int weight) {
+        this.weight=weight;
         /**
          * Assign parameter weight to class variable 'weight'.
          */
-        throw new UnsupportedOperationException("You need to implement this method");
+      //  throw new UnsupportedOperationException("You need to implement this method");
     }
 }
